@@ -1,10 +1,9 @@
 *mini.bufremove* Remove buffers
-*MiniBufremove*
 
 MIT License Copyright (c) 2021 Evgeni Chasnovski
 
-==============================================================================
-
+------------------------------------------------------------------------------
+                                                                 *MiniBufremove*
 Features:
 - Unshow, delete, and wipeout buffer while saving window layout
   (opposite to builtin Neovim's commands).
@@ -28,7 +27,7 @@ To stop module from showing non-error feedback, set `config.silent = true`.
 1. Which buffer to show in window(s) after its current buffer is removed is
    decided by the algorithm:
    - If alternate buffer (see |CTRL-^|) is listed (see |buflisted()|), use it.
-   - If previous listed buffer (see |bprevious|) is different, use it.
+   - If previous listed buffer (see |:bprevious|) is different, use it.
    - Otherwise create a new one with `nvim_create_buf(true, false)` and use it.
 
 # Disabling ~
@@ -56,9 +55,7 @@ Usage ~
 ------------------------------------------------------------------------------
                                                           *MiniBufremove.config*
                              `MiniBufremove.config`
-Module config
-
-Default values:
+Defaults ~
 >lua
   MiniBufremove.config = {
     -- Whether to disable showing non-error feedback
